@@ -1,17 +1,10 @@
 <?php
 
-// Seção 
+$page = @$_GET['page'];
 
-session_start();
+include('header.php');
 
-if (!isset($_SESSION['nome'])) {
-    $_SESSION['nome'] = 'Patrick';
-} else {
-    echo 'já existe';
+if (file_exists($page.'.php')) {
+    include($page.'.php');
 }
-
-echo $_SESSION['nome'];
-
-// Essas informações da seção quando estartada ficam no servidor da aplicação por um tempo 
-
 ?>
