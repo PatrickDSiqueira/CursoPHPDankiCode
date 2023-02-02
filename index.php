@@ -14,7 +14,6 @@ class BD{
     }
 }
 
-
 $bd = new BD(USER,SENHA);
 
 for ($i=0; $i < 10; $i++) { 
